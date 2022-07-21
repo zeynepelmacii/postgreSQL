@@ -1,0 +1,10 @@
+Biyoloji bölümünde sunulan tüm dersleri almış tüm öğrenciler
+  select distinct S.ID, S.name
+  from student as S
+  where not exists ( (select course_id
+  from course
+  where dept_name = ’Biology’)
+  except
+  (select T.course_id
+  from takes as T
+  where S.ID = T.ID));
