@@ -1,0 +1,12 @@
+Ders vermiş tüm instructor’ları verdikleri dersin course_id’si ile birlikte görüntüle:
+  select name, course_id
+  from instructor , teaches
+  where instructor.ID = teaches.ID 
+
+
+Art bölümünde ders vermiş tüm instructor’ları verdikleri dersin course_id’si ile birlikte görüntüle:
+  select name, course_id
+  from instructor , teaches
+  where instructor.ID = teaches.ID and instructor. dept_name = ‘Art’
+  
+
