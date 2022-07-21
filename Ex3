@@ -1,0 +1,5 @@
+Herbir bölüm için Spring 2010 döneminde ders vermiş instructor sayısı?
+  select dept_name, count(distinct ID) as instr_count
+  from instructor natural join teaches
+  where semester = ‘Spring’ and year=2010
+  group by dept_name;
