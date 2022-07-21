@@ -1,0 +1,7 @@
+ID’si 10101 olan profesör tarafından verilen ders bölümlerini alan toplam (farklı) öğrenci sayısını bulunuz
+  select count (distinct ID)
+  from takes
+  where (course_id, sec_id, semester, year) in
+  (select course_id, sec_id, semester, year
+  from teaches
+  where teaches.ID= 10101);
