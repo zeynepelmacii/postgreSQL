@@ -1,0 +1,7 @@
+2009'da en az iki kez açılan tüm dersleri bulunuz.
+  select T.course_id
+  from course as T
+  where 2 >= (select count(R.course_id)
+  from section as R
+  where T.course_id= R.course_id
+  and R.year = 2009);
