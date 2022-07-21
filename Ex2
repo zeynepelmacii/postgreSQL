@@ -1,0 +1,4 @@
+En yüksek ücretten daha düşük ücret alan instructor’larınücretini görüntüle.
+  select distinct T.salary
+  from instructor as T, instructor as S
+  where T.salary < S.salary
