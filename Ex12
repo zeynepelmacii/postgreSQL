@@ -1,0 +1,7 @@
+Maksimum bütçeye sahip tüm departmanları bulun
+  with max_budget (value) as
+  (select max(budget)
+  from department)
+  select department.name
+  from department, max_budget
+  where department.budget = max_budget.value;
