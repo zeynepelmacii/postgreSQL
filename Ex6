@@ -1,0 +1,7 @@
+Fall 2009’da açılan fakat Spring 2010’da açılmayan dersleri bulunuz.
+  select distinct course_id
+  from section
+  where semester = ’Fall’ and year= 2009 and
+  course_id not in (select course_id
+  from section
+  where semester = ’Spring’ and year= 2010);
